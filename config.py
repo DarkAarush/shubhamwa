@@ -7,26 +7,26 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("26414151"))
-API_HASH = getenv("28d0cb3b9b1318ac33c52cd8ea14ff51")
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "『˹𝑳𝒐𝒗𝒆𝒓 ✘ ℳ𝓾𝓼𝓲c‌˼』")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ")
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "1548904516").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "1356469075").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Lover-Music/Lovermusic09")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/DarkAarush/Wynk-music")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/the_chatting")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/tccnetwork")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Cute_Copy_Aarush")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
@@ -76,34 +76,34 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg",
+    "https://www.medianews4u.com/wp-content/uploads/2019/05/Tips.jpg",
 )
 
-PLAYLIST_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+PLAYLIST_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
 
-GLOBAL_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+GLOBAL_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
 
-STATS_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+STATS_IMG_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerDS_Y-E21fTDJHNcpkuUHEA152aQUUxvcQ&usqp=CAU"
 
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+TELEGRAM_AUDIO_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerDS_Y-E21fTDJHNcpkuUHEA152aQUUxvcQ&usqp=CAU"
 
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+TELEGRAM_VIDEO_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
 
-STREAM_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+STREAM_IMG_URL = "https://apkdone.com/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
 
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
 
-YOUTUBE_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
 
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
 
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
 
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
 
 
 def time_to_seconds(time):
@@ -130,9 +130,9 @@ if UPSTREAM_REPO:
 if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+            PING_IMG_URL = "https://www.medianews4u.com/wp-content/uploads/2019/05/Tips.jpg"
 
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://telegra.ph/file/b0cf375da1dbadc69036a.jpg"
+            START_IMG_URL = "https://static.apkdone.me/wp-content/uploads/2020/10/Wynk-Music-poster.jpg"
